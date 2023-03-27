@@ -21,12 +21,21 @@ export default {
         </div>
       </div>
     </div>
-    <div class="bottom-footer"></div>
+    <div class="bottom-footer">
+      <div class="container h-100">
+        <button>Sign-up now!</button>
+        <div class="folow-us">
+          <span>Follow Us</span>
+          <div class="icons"></div>
+        </div>
+      </div>
+    </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables";
+@use "../styles/partials/mixins";
 
 .top-footer {
   height: 370px;
@@ -50,5 +59,10 @@ export default {
 .bottom-footer {
   height: 110px;
   background-color: variables.$footer-bg-color;
+
+  .container {
+    @include mixins.d-flex-center;
+    justify-content: space-between;
+  }
 }
 </style>
