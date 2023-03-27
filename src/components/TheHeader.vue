@@ -1,21 +1,10 @@
 <script>
+import ListDcComics from "./ListDcComics.vue";
+
 export default {
   name: "TheHeader",
-  data() {
-    return {
-      headerNavList: [
-        "Characters",
-        "Comics",
-        "Movies",
-        "Tv",
-        "Games",
-        "Collectibles",
-        "Videos",
-        "Fans",
-        "News",
-        "Shop",
-      ],
-    };
+  components: {
+    ListDcComics,
   },
 };
 </script>
@@ -27,9 +16,7 @@ export default {
         <img class="h-100" src="../assets/dc-logo.png" alt="logo DC" />
       </div>
       <nav class="nav-bar">
-        <ul>
-          <li v-for="item in headerNavList">{{ item }}</li>
-        </ul>
+        <ListDcComics />
       </nav>
     </div>
   </header>
@@ -52,11 +39,9 @@ header {
 
 .nav-bar {
   ul {
-    @include mixins.d-flex-center;
     gap: 15px;
     text-transform: uppercase;
     font-size: 10px;
-    list-style: none;
   }
 }
 </style>
