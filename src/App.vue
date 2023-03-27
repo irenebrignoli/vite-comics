@@ -4,6 +4,9 @@ import BlueBand from "./components/BlueBand.vue";
 import TheFooter from "./components/TheFooter.vue";
 
 export default {
+  data() {
+    return {};
+  },
   methods: {},
   components: {
     TheHeader,
