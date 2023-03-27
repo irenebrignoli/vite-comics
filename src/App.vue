@@ -1,10 +1,14 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
+import BlueBand from "./components/BlueBand.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 export default {
   methods: {},
   components: {
     TheHeader,
+    BlueBand,
+    TheFooter,
   },
 };
 </script>
@@ -16,6 +20,8 @@ export default {
       <h2>Content main here</h2>
     </div>
   </div>
+  <BlueBand />
+  <TheFooter />
 </template>
 
 <style lang="scss">

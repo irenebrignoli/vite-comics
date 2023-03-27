@@ -4,6 +4,15 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+  <section id="blue-band"></section>
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../styles/partials/variables";
+
+#blue-band {
+  height: 150px;
+  background-color: variables.$primary-color;
+}
+</style>
