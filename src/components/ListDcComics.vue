@@ -3,18 +3,21 @@ export default {
   name: "ListDcComics",
   data() {
     return {
-      DcComics: [
-        "Characters",
-        "Comics",
-        "Movies",
-        "Tv",
-        "Games",
-        "Collectibles",
-        "Videos",
-        "Fans",
-        "News",
-        "Shop",
-      ],
+      DcComics: {
+        title: "DcComics",
+        links: [
+          "Characters",
+          "Comics",
+          "Movies",
+          "Tv",
+          "Games",
+          "Collectibles",
+          "Videos",
+          "Fans",
+          "News",
+          "Shop",
+        ],
+      },
     };
   },
 };
@@ -22,7 +25,7 @@ export default {
 
 <template>
   <ul>
-    <li v-for="item in DcComics">{{ item }}</li>
+    <li v-for="link in DcComics.links">{{ link }}</li>
   </ul>
 </template>
 
@@ -30,7 +33,6 @@ export default {
 @use "../styles/partials/variables";
 
 ul {
-  display: flex;
   list-style: none;
 }
 </style>

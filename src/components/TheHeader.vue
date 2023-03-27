@@ -39,6 +39,7 @@ header {
 
 .nav-bar {
   ul {
+    @include mixins.d-flex-center;
     gap: 15px;
     text-transform: uppercase;
     font-size: 10px;

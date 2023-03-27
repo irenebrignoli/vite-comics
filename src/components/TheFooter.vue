@@ -1,6 +1,13 @@
 <script>
+import FooterLists from "./FooterLists.vue";
+import ListDcComics from "./ListDcComics.vue";
+
 export default {
   name: "TheFooter",
+  components: {
+    FooterLists,
+    ListDcComics,
+  },
 };
 </script>
 
@@ -8,6 +15,7 @@ export default {
   <footer>
     <div class="top-footer">
       <div class="container h-100">
+        <FooterLists />
         <div class="logo-bg">
           <img src="../assets/dc-logo-bg.png" alt="" />
         </div>
