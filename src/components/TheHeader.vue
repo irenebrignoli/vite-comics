@@ -41,11 +41,31 @@ header {
 .nav-bar {
   ul {
     @include mixins.d-flex-center;
-    gap: 15px;
+    gap: 20px;
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 600;
     list-style: none;
+
+    li {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        color: variables.$primary-color;
+      }
+
+      &:hover:after {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: variables.$primary-color;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 </style>
