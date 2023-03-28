@@ -10,6 +10,28 @@ import "@fontsource/open-sans/700.css";
 export default {
   data() {
     return {
+      BlueList: [
+        {
+          image: "comics-digital-comics.png",
+          name: "Digital Comics",
+        },
+        {
+          image: "comics-merchandise.png",
+          name: "Dc Merchandise",
+        },
+        {
+          image: "comics-subscriptions.png",
+          name: "Subscription",
+        },
+        {
+          image: "comics-shop-locator.png",
+          name: "Comic Shop Locator",
+        },
+        {
+          image: "dc-power-visa.svg",
+          name: "Dc Power Visa",
+        },
+      ],
       DcComicsList: {
         title: "Dc Comics",
         links: [
@@ -43,7 +65,7 @@ export default {
       <h2>Content main here</h2>
     </div>
   </div>
-  <BlueBand />
+  <BlueBand :elements="BlueList" />
   <TheFooter :title="DcComicsList.title" :links="DcComicsList.links" />
 </template>
 
