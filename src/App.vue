@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       DcComicsList: {
-        title: "DcComics",
+        title: "Dc Comics",
         links: [
           "Characters",
           "Comics",
@@ -44,7 +44,7 @@ export default {
     </div>
   </div>
   <BlueBand />
-  <TheFooter />
+  <TheFooter :title="DcComicsList.title" :links="DcComicsList.links" />
 </template>
 
 <style lang="scss">
