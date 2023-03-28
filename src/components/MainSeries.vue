@@ -1,6 +1,11 @@
 <script>
+import SerieCard from "../components/SerieCard.vue";
+
 export default {
   name: "MainSeries",
+  components: {
+    SerieCard,
+  },
   data() {
     return {
       series: [
@@ -95,9 +100,8 @@ export default {
 <template>
   <div class="series">
     <div class="container">
-      <div class="card">
-        <img src="../assets/" alt="" />
-        <h3>Action</h3>
+      <div class="box" v-for="(serie, i) in series">
+        <SerieCard :image="serie.thumb" :title="serie.series" />
       </div>
     </div>
   </div>
@@ -111,14 +115,14 @@ export default {
   background-color: variables.$main-bg-color;
 
   .container {
-    @include mixins.d-flex-center;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
     padding: 50px 0;
 
-    .card {
-      width: 200px;
-      height: 300px;
-      background-color: aliceblue;
+    .box {
+      width: 150px;
     }
   }
 }
