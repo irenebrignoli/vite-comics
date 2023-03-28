@@ -1,10 +1,9 @@
 <script>
-import ListDcComics from "./ListDcComics.vue";
-
 export default {
   name: "TheHeader",
-  components: {
-    ListDcComics,
+  props: {
+    title: String,
+    links: Array,
   },
 };
 </script>
@@ -16,7 +15,9 @@ export default {
         <img class="h-100" src="../assets/dc-logo.png" alt="logo DC" />
       </div>
       <nav class="nav-bar">
-        <ListDcComics />
+        <ul>
+          <li v-for="(link, i) in links" :key="i">{{ link }}</li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -42,7 +43,9 @@ header {
     @include mixins.d-flex-center;
     gap: 15px;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    list-style: none;
   }
 }
 </style>

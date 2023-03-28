@@ -1,12 +1,10 @@
 <script>
 import FooterLists from "./FooterLists.vue";
-import ListDcComics from "./ListDcComics.vue";
 
 export default {
   name: "TheFooter",
   components: {
     FooterLists,
-    ListDcComics,
   },
 };
 </script>

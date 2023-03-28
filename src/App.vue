@@ -2,10 +2,30 @@
 import TheHeader from "./components/TheHeader.vue";
 import BlueBand from "./components/BlueBand.vue";
 import TheFooter from "./components/TheFooter.vue";
+import "@fontsource/open-sans/400.css";
+import "@fontsource/open-sans/500.css";
+import "@fontsource/open-sans/600.css";
+import "@fontsource/open-sans/700.css";
 
 export default {
   data() {
-    return {};
+    return {
+      DcComicsList: {
+        title: "DcComics",
+        links: [
+          "Characters",
+          "Comics",
+          "Movies",
+          "Tv",
+          "Games",
+          "Collectibles",
+          "Videos",
+          "Fans",
+          "News",
+          "Shop",
+        ],
+      },
+    };
   },
   methods: {},
   components: {
@@ -17,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <TheHeader />
+  <TheHeader :title="DcComicsList.title" :links="DcComicsList.links" />
   <div class="debug-main">
     <div class="container">
       <h2>Content main here</h2>
@@ -28,7 +48,7 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./styles/general.scss";
+@use "./styles/general.scss" as *;
 @use "./styles/partials/mixins";
 
 .debug-main {
@@ -38,12 +58,3 @@ export default {
   line-height: 150px;
 }
 </style>
-
-<!-- 
-  Descrizione:
-Create un nuovo progetto utilizzando Vite e Vue 3 e definite i componenti necessari per strutturare il layout come da screenshot allegato.
-Quando la struttura a macroblocchi è pronta, popolate le voci di menu dinamicamente usando i data del componente.
-Per oggi diamo priorità alla struttura: quando è tutto bello solido, passiamo al Sass!
-Bonus:
-Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
- -->
