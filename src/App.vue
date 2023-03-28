@@ -3,6 +3,7 @@ import TheHeader from "./components/TheHeader.vue";
 import BlueBand from "./components/BlueBand.vue";
 import TheFooter from "./components/TheFooter.vue";
 import TheJumbotron from "./components/TheJumbotron.vue";
+import MainSeries from "./components/MainSeries.vue";
 import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/500.css";
 import "@fontsource/open-sans/600.css";
@@ -55,6 +56,7 @@ export default {
     BlueBand,
     TheFooter,
     TheJumbotron,
+    MainSeries,
   },
 };
 </script>
@@ -62,6 +64,7 @@ export default {
 <template>
   <TheHeader :title="DcComicsList.title" :links="DcComicsList.links" />
   <TheJumbotron />
+  <MainSeries />
   <BlueBand :elements="BlueList" />
   <TheFooter :title="DcComicsList.title" :links="DcComicsList.links" />
 </template>
