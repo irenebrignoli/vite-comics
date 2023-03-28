@@ -28,6 +28,17 @@ body {
   color: variables.$text-white-color;
   cursor: pointer;
 
+  &.primary {
+    background-color: variables.$primary-color;
+    border: none;
+    font-size: 12px;
+    padding: 10px 50px;
+
+    &:hover {
+      background-color: lighten(variables.$primary-color, 10);
+    }
+  }
+
   &:hover {
     background-color: lighten(variables.$footer-bg-color, 10);
   }

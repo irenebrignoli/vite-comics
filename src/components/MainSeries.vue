@@ -103,6 +103,7 @@ export default {
       <div class="box" v-for="(serie, i) in series">
         <SerieCard :image="serie.thumb" :title="serie.series" />
       </div>
+      <button class="my-btn primary">Load More</button>
     </div>
   </div>
 </template>
